@@ -1,16 +1,14 @@
-list_num = []
-print("Add a number:")
-num = int(input())
-list_num.append(num)
-while len(list_num) < 3:
-    print("Add a number:")
-    num = int(input())
-    list_num.append(num)
-list_num.sort(reverse = True)
-if list_num:
-
-else:
-    for i in range(len(list_num)):
-        while len(list_num) < 2:
-            sum += list_num[i] - list_num[i+1]
+def sum_of_differences(a,b,c):
+    list = [a,b,c]
+    k = 0
+    list.sort(reverse=True)
+    c = len(list)
+    while c < 2:
+        print(0)
+        break
+    else:
+        for i in range(len(list)-1):
+            sum = list[i] - list[i+1]
+            k = k + sum
+    return k
 
